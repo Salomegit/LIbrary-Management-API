@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'CASCADE',
       });
       }
-    };
+    }
   
   BorrowBook.init({
     
@@ -35,8 +35,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: 'Users', // Matches table name
-          key: 'id',
+          model: 'users', // Matches table name
+          key: 'user_id',
         },
         onDelete: 'CASCADE',
       },
@@ -44,8 +44,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: 'Books',
-          key: 'id',
+          model: 'books',
+          key: 'book_id',
         },
         onDelete: 'CASCADE',
       },
@@ -54,7 +54,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         defaultValue: DataTypes.NOW,
       },
-      
+      due_date: {
+        type: DataTypes.DATE,
+        allowNull: false,
+
+      },
       return_date: {
         type: DataTypes.DATE,
         allowNull: true,

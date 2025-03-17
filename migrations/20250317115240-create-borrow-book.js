@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: "Users", // Adjust to match your actual users table name
+          model: "users", // Adjust to match your actual users table name
           key: "user_id",
         },
         onUpdate: "CASCADE",
@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: "Books", // Adjust to match your actual books table name
+          model: "books", // Adjust to match your actual books table name
           key: "book_id",
         },
         onUpdate: "CASCADE",

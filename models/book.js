@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.hasMany(models.Borrowed, { foreignKey: 'book_id' });
+      this.hasMany(models.BorrowBook, { foreignKey: 'book_id' });
     }
   }
   Book.init({
@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     books_count: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     authors: {

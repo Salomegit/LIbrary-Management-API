@@ -4,8 +4,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon ./src/index.js",
-    "start": "node app.js",
+    "start:dev": "nodemon ./app.js",
+    "start": "node ./app.js",
     "migrate": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed --seed seed-books-from-json"
   },
   "keywords": [
